@@ -5,7 +5,7 @@ export default function LinkedInIcon() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"
-      className="text-white w-[30px] h-[30px] hover:bg-blue-500  overflow-hidden  rounded-lg p-1 transform hover:scale-110 duration-300"
+      className="text-white w-7 hover:bg-blue-500  overflow-hidden  rounded-lg p-1 transform hover:scale-110 duration-300"
     >
       <path
         fill="currentColor"
