@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
 import Button from "./Button";
+import AboutCart from "./AboutCart";
 
 export default function Hero({ scrollToSection }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
+      {isOpen && <AboutCart setIsOpen={setIsOpen} />}
       <motion.div
         className=" text-white hero-font flex items-center justify-between px-7 bg-cover bg-center overflow-hidden"
         initial={{ opacity: 0, y: 100 }}
@@ -30,7 +34,12 @@ export default function Hero({ scrollToSection }) {
                 Front-end Developer & Tech Enthusiast
               </p>
 
-              <Button title="About" />
+              <Button
+                title="About"
+                onClick={() => {
+                  setIsOpen(true);
+                }}
+              />
             </div>
           </motion.div>
         </div>

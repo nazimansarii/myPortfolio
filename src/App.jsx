@@ -15,7 +15,7 @@ function App() {
   };
   return (
     <>
-      <main className="max-w-[1500px] mx-auto bg-[]">
+      <main className="max-w-[1500px] mx-auto ">
         <div className="absolute w-full h-full min-h-screen max-w-screen-xl mx-auto">
           <Particles
             particleColors={["#ffffff", "#ffffff"]}
@@ -31,7 +31,10 @@ function App() {
         <SplashCursor />
         <Header />
         <Hero scrollToSection={scrollToSection} />
+
         <div className="text-white mt-4" ref={refSection}></div>
+
+        <div></div>
       </main>
     </>
   );
