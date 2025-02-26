@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import "./App.css";
 import Particles from "./components/Particles";
+import Form from "./components/Form";
 
 function App() {
   const refSection = useRef(null);
@@ -15,9 +16,9 @@ function App() {
   };
   return (
     <>
-      <main className="max-w-[1500px] mx-auto ">
+      <main className="max-w-[1500px] mx-auto custom-font">
         <div className="absolute w-full h-full min-h-screen max-w-screen-xl mx-auto">
-          <Particles
+          {/* <Particles
             particleColors={["#ffffff", "#ffffff"]}
             particleCount={200}
             particleSpread={10}
@@ -26,15 +27,18 @@ function App() {
             moveParticlesOnHover={true}
             alphaParticles={false}
             disableRotation={false}
-          />
+          /> */}
         </div>
-        <SplashCursor />
+        {/* <SplashCursor /> */}
         <Header />
         <Hero scrollToSection={scrollToSection} />
 
         <div className="text-white mt-4" ref={refSection}></div>
 
-        <div></div>
+        {/* GET IN Touch section */}
+        <section>
+          <Form />
+        </section>
       </main>
     </>
   );

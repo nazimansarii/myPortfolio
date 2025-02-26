@@ -9,6 +9,10 @@
   font-optical-sizing: auto;
   min-height: calc(-64px + 100vh);
 }
+.custom-font {
+  font-family: "Josefin Sans", serif;
+  font-optical-sizing: auto;
+}
 body {
   background-color: #060606;
   overflow-y: scroll; /* Ensure the scrollbar is always visible */

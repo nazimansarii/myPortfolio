@@ -12,7 +12,7 @@ const Button = ({ title, onClick, rotate }) => {
                 {title}
               </span>
               <svg
-                className={`w-6 h-6 transition-transform duration-500 group-hover:translate-x-1 rotate-${rotate}`}
+                className={`w-6 h-6 transition-transform duration-500 group-hover:translate-x-1 ${rotate}? rotate-${rotate} : ''}`}
                 data-slot="icon"
                 aria-hidden="true"
                 fill="currentColor"
