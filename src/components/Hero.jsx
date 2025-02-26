@@ -149,7 +149,7 @@ export default function Hero({ scrollToSection }) {
           </ul>
         </motion.div>
         <div className="absolute bottom-0 left-0 w-full flex justify-center mb-1">
-          <Button title="Latest Work" onClick={scrollToSection} rotate={90} />
+          <Button title="Latest Work" onClick={scrollToSection} rotate='90' />
         </div>
       </motion.div>
     </>

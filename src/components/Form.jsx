@@ -398,9 +398,20 @@ export default function Form() {
             autoComplete="off"
             className="py-6 text-white  px-4  w-full flex justify-center items-center flex-col"
             onSubmit={handleSubmit}
-            name="contactForm"
-            netlify='true'
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/success"
           >
+            <input type="hidden" name="form-name" value="contact" />
+
+            {/* Honeypot field (invisible) */}
+            <p className="hidden">
+              <label>
+                Don’t fill this out if you're human: <input name="bot-field" />
+              </label>
+            </p>
             <Input
               label="Your Name"
               icons={
