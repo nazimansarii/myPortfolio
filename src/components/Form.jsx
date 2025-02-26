@@ -399,7 +399,7 @@ export default function Form() {
             method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"
-            action="#"
+            
             class="py-6 text-white px-4 w-full max-w-md flex flex-col"
           >
             <input type="hidden" name="form-name" value="contact" />
