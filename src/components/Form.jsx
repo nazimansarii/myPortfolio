@@ -1,10 +1,6 @@
 import React from "react";
 
 export default function Form() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    e.target.reset();
-  };
   return (
     <>
       <h5 className="text-white text-center font-bold text-2xl my-3 ">
@@ -332,7 +328,6 @@ export default function Form() {
             className="py-6 text-white px-4 w-full flex justify-center items-center flex-col"
             method="POST"
             action="https://formspree.io/f/xovqdaqb"
-            onSubmit={handleSubmit}
           >
             <div className="w-full my-6 rounded-lg transition-all duration-150 ease-in-out shadow-cyan-500 shadow-sm relative hover:shadow-md">
               <input
