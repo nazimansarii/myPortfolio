@@ -39,7 +39,22 @@ export default function Hero({ scrollToSection }) {
                 onClick={() => {
                   setIsOpen(true);
                 }}
-              />
+              >
+                <svg
+                  className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"
+                  data-slot="icon"
+                  aria-hidden="true"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clipRule="evenodd"
+                    d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                    fillRule="evenodd"
+                  />
+                </svg>
+              </Button>
             </div>
           </motion.div>
         </div>
@@ -149,7 +164,22 @@ export default function Hero({ scrollToSection }) {
           </ul>
         </motion.div>
         <div className="absolute bottom-0 left-0 w-full flex justify-center mb-1">
-          <Button title="Latest Work" onClick={scrollToSection} rotate='90' />
+          <Button title="Latest Work" onClick={scrollToSection}>
+            <svg
+              className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1 rotate-90"
+              data-slot="icon"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clipRule="evenodd"
+                d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                fillRule="evenodd"
+              />
+            </svg>
+          </Button>
         </div>
       </motion.div>
     </>

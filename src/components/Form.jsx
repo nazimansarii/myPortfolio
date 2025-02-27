@@ -1,77 +1,6 @@
-import React, { useState } from "react";
-import Input from "./Input";
-import Message from "./Message";
-import { pattern } from "framer-motion/client";
+import React from "react";
 
 export default function Form() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  // validationConfig
-  const [errors, setErrors] = useState({});
-  const validationConfig = {
-    name: [
-      { required: true, message: "Please enter your name" },
-      { pattern: /^[a-zA-Z]+$/, message: "Please enter a valid name" },
-    ],
-    email: [
-      { required: true, message: "Please enter your email" },
-      {
-        pattern: /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/,
-        message: "Please enter a valid email",
-      },
-    ],
-    message: [
-      { required: true, message: "Please enter your message" },
-      { minLength: 20, message: "Please enter at least 20 charector" },
-    ],
-  };
-
-  // validation handler
-  const validation = (data) => {
-    const errorData = {};
-    Object.entries(data).forEach(([key, value]) => {
-      validationConfig[key].some((rule) => {
-        if (rule.required && !value) {
-          errorData[key] = rule.message;
-          return true;
-        }
-        if (rule.minLength && value.length < rule.minLength) {
-          errorData[key] = rule.message + " Current Length is " + value.length;
-          return true;
-        }
-        if (rule.pattern && !rule.pattern.test(value)) {
-          errorData[key] = rule.message;
-          return true;
-        }
-      });
-    });
-    setErrors(errorData);
-    return errorData;
-  };
-
-  // handle submit
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const validate = validation(formData);
-    if (Object.keys(validate).length) return;
-
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
-  };
-
-  // onchange handler
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({ ...prevState, [name]: value }));
-    setErrors({});
-  };
   return (
     <>
       <h5 className="text-white text-center font-bold text-2xl my-3 ">
@@ -396,14 +325,19 @@ export default function Form() {
         <div className="flex  justify-center items-center  w-full md:w-1/2  text-white ">
           <form
             autoComplete="off"
-            className="py-6 text-white  px-4  w-full flex justify-center items-center flex-col"
-            onSubmit={handleSubmit}
+            className="py-6 text-white px-4 w-full flex justify-center items-center flex-col"
             method="POST"
             action="https://formspree.io/f/xovqdaqb"
           >
-            <Input
-              label="Your Name"
-              icons={
+            <div className="w-full my-6 rounded-lg transition-all duration-150 ease-in-out shadow-cyan-500 shadow-sm relative hover:shadow-md">
+              <input
+                placeholder="Your Name"
+                type="text"
+                name="name"
+                className="text-white/70 px-10 py-3 rounded-l-lg outline-none w-full"
+                required
+              />
+              <div className="absolute left-0 top-0 mt-3 ml-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -418,16 +352,18 @@ export default function Form() {
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
-              }
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              error={errors.name}
-            />
+              </div>
+            </div>
 
-            <Input
-              label="Your Email"
-              icons={
+            <div className="w-full my-6 rounded-lg transition-all duration-150 ease-in-out shadow-cyan-500 shadow-sm relative hover:shadow-md">
+              <input
+                placeholder="Your Email"
+                type="email"
+                name="email"
+                className="text-white/70 px-10 py-3 rounded-l-lg outline-none w-full"
+                required
+              />
+              <div className="absolute left-0 top-0 mt-3 ml-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -443,16 +379,18 @@ export default function Form() {
                   <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
                   <path d="M3 7l9 6l9 -6"></path>
                 </svg>
-              }
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              error={errors.email}
-            />
+              </div>
+            </div>
 
-            <Message
-              label="Your Message"
-              icons={
+            <div className="w-full my-6 rounded-lg transition-all duration-150 ease-in-out shadow-cyan-500 shadow-sm relative hover:shadow-md">
+              <textarea
+                placeholder="Your Message"
+                name="message"
+                className="text-white/70 px-10 py-3 rounded-l-lg outline-none w-full"
+                rows={3}
+                required
+              />
+              <div className="absolute left-0 top-0 mt-3 ml-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -467,12 +405,8 @@ export default function Form() {
                 >
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                 </svg>
-              }
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              error={errors.message}
-            />
+              </div>
+            </div>
 
             <button className="bg-[#1788AE] w-full py-2 mt-4 rounded-md cursor-pointer transform hover:scale-101 transition-transform duration-500">
               Send Message

@@ -18,7 +18,7 @@ function App() {
     <>
       <main className="max-w-[1500px] mx-auto custom-font">
         <div className="absolute hidden md:block w-full h-full min-h-screen max-w-screen-xl mx-auto">
-          <Particles
+          {/* <Particles
             particleColors={["#ffffff", "#ffffff"]}
             particleCount={200}
             particleSpread={10}
@@ -27,7 +27,7 @@ function App() {
             moveParticlesOnHover={true}
             alphaParticles={false}
             disableRotation={false}
-          />
+          /> */}
         </div>
         <SplashCursor />
         <Header />
