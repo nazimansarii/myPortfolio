@@ -395,111 +395,86 @@ export default function Form() {
 
         <div className="flex  justify-center items-center  w-full md:w-1/2  text-white ">
           <form
-            name="contact"
+            autoComplete="off"
+            className="py-6 text-white  px-4  w-full flex justify-center items-center flex-col"
+            onSubmit={handleSubmit}
             method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            
-            class="py-6 text-white px-4 w-full max-w-md flex flex-col"
+            action="https://formspree.io/f/xovqdaqb"
           >
-            <input type="hidden" name="form-name" value="contact" />
-
-            <p class="hidden">
-              <label>
-                Don’t fill this out if you're human: <input name="bot-field" />
-              </label>
-            </p>
-
-            <div class="mb-4">
-              <label class="block mb-2" for="name">
-                Your Name
-              </label>
-              <div class="flex items-center bg-[#333] p-2 rounded-md">
+            <Input
+              label="Your Name"
+              icons={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
+                  viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="mr-2"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  class="w-full bg-transparent outline-none text-white"
-                  required
-                />
-              </div>
-            </div>
+              }
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              error={errors.name}
+            />
 
-            <div class="mb-4">
-              <label class="block mb-2" for="email">
-                Your Email
-              </label>
-              <div class="flex items-center bg-[#333] p-2 rounded-md">
+            <Input
+              label="Your Email"
+              icons={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
+                  viewBox="0 0 24 24"
                   fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="mr-2"
+                  stroke="#ffffff"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
                   <path d="M3 7l9 6l9 -6"></path>
                 </svg>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  class="w-full bg-transparent outline-none text-white "
-                  required
-                />
-              </div>
-            </div>
+              }
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              error={errors.email}
+            />
 
-            <div class="mb-4">
-              <label class="block mb-2" for="message">
-                Your Message
-              </label>
-              <div class="flex items-start bg-[#333] p-2 rounded-md pl-2">
+            <Message
+              label="Your Message"
+              icons={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
+                  viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="mr-2  mt-1"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feather feather-message-square"
                 >
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                 </svg>
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  class="w-full bg-transparent outline-none text-white"
-                  rows="4"
-                  required
-                ></textarea>
-              </div>
-            </div>
+              }
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              error={errors.message}
+            />
 
-            <button
-              type="submit"
-              class="bg-[#1788AE] w-full py-2 mt-4 rounded-md cursor-pointer transform hover:scale-101 transition-transform duration-500"
-            >
+            <button className="bg-[#1788AE] w-full py-2 mt-4 rounded-md cursor-pointer transform hover:scale-101 transition-transform duration-500">
               Send Message
             </button>
           </form>
