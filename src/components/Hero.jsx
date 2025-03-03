@@ -28,10 +28,10 @@ export default function Hero({ scrollToSection }) {
               <p className="my-2 ">Front-end Developer </p>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
                 Hello, I'm <br />
-                <span className="text-[#45F8B5]">Nazim Ansari</span>
+                <span className="text-[#1788ae]">Nazim Ansari</span>
               </h1>
               <p className="text-lg md:text-xl mb-6">
-                Front-end Developer & Tech Enthusiast
+                Front-end Developer & Tech Visionary!
               </p>
 
               <Button
@@ -164,7 +164,7 @@ export default function Hero({ scrollToSection }) {
           </ul>
         </motion.div>
         <div className="absolute bottom-0 left-0 w-full flex justify-center mb-1">
-          <Button title="Latest Work" onClick={scrollToSection}>
+          <Button title="Latest Works" onClick={scrollToSection}>
             <svg
               className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1 rotate-90"
               data-slot="icon"

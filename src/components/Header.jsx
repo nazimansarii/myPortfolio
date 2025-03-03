@@ -22,7 +22,7 @@ export default function Header() {
           texts={[
             "Front-end Developer!",
             "Problem Solver!",
-            "Tech Enthusiast!",
+            "Innovative Thinker!",
             "Tech Visionary!",
           ]}
           mainClassName="title text-xl w-max-content px-2 sm:px-2 md:px-3  text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"

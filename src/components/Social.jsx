@@ -1,10 +1,14 @@
 import React from "react";
 import { Link } from "react-router";
+import { motion } from "framer-motion";
 
 export default function Social() {
-
   return (
-    <div className="flex items-center justify-center">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      className="flex items-center justify-center"
+    >
       <ul className="flex justify-end space-x-4 flex-row mb-2">
         {/* twitter icon */}
         <li>
@@ -114,7 +118,6 @@ export default function Social() {
           </Link>
         </li>
       </ul>
-     
-    </div>
+    </motion.div>
   );
 }

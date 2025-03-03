@@ -1,11 +1,11 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 export default function Form() {
   return (
     <>
-      <h5 className="text-white text-center font-bold text-2xl my-3 ">
+      <h2 className="text-3xl sm:text-[40px]  relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] ">
         Get In Touch
-      </h5>
+      </h2>
       <div className="w-full flex flex-wrap ">
         <div className=" w-full md:w-1/2  text-white  ">
           <svg
@@ -322,14 +322,22 @@ export default function Form() {
           </svg>
         </div>
 
-        <div className="flex  justify-center items-center  w-full md:w-1/2  text-white ">
-          <form
+        <div className="flex justify-center items-center w-full md:w-1/2 text-white">
+          <motion.form
             autoComplete="off"
             className="py-6 text-white px-4 w-full flex justify-center items-center flex-col"
             method="POST"
             action="https://formspree.io/f/xovqdaqb"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           >
-            <div className="w-full my-6 rounded-lg transition-all duration-150 ease-in-out shadow-cyan-500 shadow-sm relative hover:shadow-md">
+            <motion.div
+              className="w-full my-6 rounded-lg transition-all duration-150 ease-in-out shadow-cyan-500 shadow-sm relative hover:shadow-md"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               <input
                 placeholder="Your Name"
                 type="text"
@@ -353,9 +361,14 @@ export default function Form() {
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="w-full my-6 rounded-lg transition-all duration-150 ease-in-out shadow-cyan-500 shadow-sm relative hover:shadow-md">
+            <motion.div
+              className="w-full my-6 rounded-lg transition-all duration-150 ease-in-out shadow-cyan-500 shadow-sm relative hover:shadow-md"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
               <input
                 placeholder="Your Email"
                 type="email"
@@ -380,9 +393,14 @@ export default function Form() {
                   <path d="M3 7l9 6l9 -6"></path>
                 </svg>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="w-full my-6 rounded-lg transition-all duration-150 ease-in-out shadow-cyan-500 shadow-sm relative hover:shadow-md">
+            <motion.div
+              className="w-full my-6 rounded-lg transition-all duration-150 ease-in-out shadow-cyan-500 shadow-sm relative hover:shadow-md"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
               <textarea
                 placeholder="Your Message"
                 name="message"
@@ -406,12 +424,16 @@ export default function Form() {
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                 </svg>
               </div>
-            </div>
+            </motion.div>
 
-            <button className="bg-[#1788AE] w-full py-2 mt-4 rounded-md cursor-pointer transform hover:scale-101 transition-transform duration-500">
-              Send Message
-            </button>
-          </form>
+            <motion.button
+              className="bg-[#1788AE] w-full py-2 mt-4 rounded-md cursor-pointer transform hover:scale-101 transition-transform duration-500 flex justify-center items-center gap-2"
+              whileHover={{ scale: 1.0 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              Send Message <span className="text-2xl">&#8594;</span>
+            </motion.button>
+          </motion.form>
         </div>
       </div>
     </>

@@ -7,6 +7,7 @@ import Particles from "./components/Particles";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
 import Social from "./components/Social";
+import Projects from "./components/Projects";
 
 function App() {
   const refSection = useRef(null);
@@ -31,11 +32,13 @@ function App() {
             disableRotation={false}
           /> */}
         </div>
-        {/* <SplashCursor /> */}
+        <SplashCursor />
         <Header />
         <Hero scrollToSection={scrollToSection} />
 
-        <div className="text-white mt-4" ref={refSection}></div>
+        <div className="text-white p-4" ref={refSection}>
+          <Projects />
+        </div>
 
         {/* GET IN Touch section */}
         <section>
