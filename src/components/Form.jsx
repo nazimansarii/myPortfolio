@@ -323,21 +323,13 @@ export default function Form() {
         </div>
 
         <div className="flex justify-center items-center w-full md:w-1/2 text-white">
-          <motion.form
+          <form
             autoComplete="off"
             className="py-6 text-white px-4 w-full flex justify-center items-center flex-col"
             method="POST"
             action="https://formspree.io/f/xovqdaqb"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
           >
-            <motion.div
-              className="w-full my-6 rounded-lg transition-all duration-150 ease-in-out shadow-cyan-500 shadow-sm relative hover:shadow-md"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
+            <div className="w-full my-6 rounded-lg transition-all duration-150 ease-in-out shadow-cyan-500 shadow-sm relative hover:shadow-md">
               <input
                 placeholder="Your Name"
                 type="text"
@@ -361,14 +353,9 @@ export default function Form() {
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="w-full my-6 rounded-lg transition-all duration-150 ease-in-out shadow-cyan-500 shadow-sm relative hover:shadow-md"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
+            <div className="w-full my-6 rounded-lg transition-all duration-150 ease-in-out shadow-cyan-500 shadow-sm relative hover:shadow-md">
               <input
                 placeholder="Your Email"
                 type="email"
@@ -393,14 +380,9 @@ export default function Form() {
                   <path d="M3 7l9 6l9 -6"></path>
                 </svg>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="w-full my-6 rounded-lg transition-all duration-150 ease-in-out shadow-cyan-500 shadow-sm relative hover:shadow-md"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
+            <div className="w-full my-6 rounded-lg transition-all duration-150 ease-in-out shadow-cyan-500 shadow-sm relative hover:shadow-md">
               <textarea
                 placeholder="Your Message"
                 name="message"
@@ -424,7 +406,7 @@ export default function Form() {
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                 </svg>
               </div>
-            </motion.div>
+            </div>
 
             <motion.button
               className="bg-[#1788AE] w-full py-2 mt-4 rounded-md cursor-pointer transform hover:scale-101 transition-transform duration-500 flex justify-center items-center gap-2"
@@ -433,7 +415,7 @@ export default function Form() {
             >
               Send Message <span className="text-2xl">&#8594;</span>
             </motion.button>
-          </motion.form>
+          </form>
         </div>
       </div>
     </>
