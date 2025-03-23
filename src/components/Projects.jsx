@@ -51,10 +51,10 @@ export default function Projects() {
             </Link>
 
             <div className="mt-6 max-w-[350px] w-full">
-              <h4 className="text-center text-2xl text-[#FBE37B] font-bold">
+              <h4 className="text-center text-2xl border-t-2 rounded-md pt-1 text-[#FBE37B] font-bold ">
                 Tailor Shop
               </h4>
-              <p className="text-md my-1">A tailor shop platform</p>
+              <p className="text-md my-1 font-extrabold border-b-2  rounded-md text-amber-600 py-1">A tailor shop platform</p>
               <p className="text-justify">
                 This website is fully generated with the help of AI (Artificial
                 Intelligence), designed to showcase a tailor shop’s 15 years of
@@ -130,10 +130,10 @@ export default function Projects() {
             </Link>
 
             <div className="mt-6 max-w-[350px] w-full">
-              <h4 className="text-center text-2xl text-[#FC815C] font-bold">
+              <h4 className="text-center text-2xl text-[#FC815C] font-bold border-t-2 rounded-md  pt-1">
                 Expense Tracker
               </h4>
-              <p className="text-md my-1">An Expense Tracker platform</p>
+              <p className="text-md my-1 font-extrabold border-b-2  rounded-md text-emerald-600 py-1 ">An Expense Tracker platform</p>
               <p className="text-justify">
                 A simple and efficient app to track your income and expenses. It
                 helps you manage your budget and monitor your spending. Stay

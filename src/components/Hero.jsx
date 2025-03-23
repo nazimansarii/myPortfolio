@@ -67,7 +67,7 @@ export default function Hero({ scrollToSection }) {
             {/* twitter icon */}
             <li>
               <Link
-                to="https://twitter.com/mohd_najim9"
+                to="https://twitter.com/naziimansari"
                 target="_blank"
                 className="text-white cursor-pointer"
               >
@@ -145,7 +145,7 @@ export default function Hero({ scrollToSection }) {
 
             <li>
               <Link
-                to="mailto:codernajim@gmail.com"
+                to="mailto:nazimansariie@gmail.com"
                 target="_blank"
                 className="text-white cursor-pointer"
               >
