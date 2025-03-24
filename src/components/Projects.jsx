@@ -222,7 +222,7 @@ export default function Projects() {
               <p className="text-justify">
                 Rest Countries is a ReactJS app that fetches real-time data from
                 the REST Countries API. It provides details like population,
-                region, and capital. It also allows you to filter countries by
+                region, and capital. It also allows you to filter countries.
               </p>
               <ul className="flex justify-evenly items-center my-3 flex-wrap gap-2">
                 <li className="border rounded-md px-4 py-1">#HTML (JSX)</li>
