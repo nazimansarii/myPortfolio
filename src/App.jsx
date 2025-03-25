@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <main className="max-w-[1500px] mx-auto custom-font">
-        <div className="absolute hidden md:block w-full h-full min-h-screen max-w-screen-xl mx-auto">
+        <div className="absolute w-full h-full min-h-screen max-w-screen-xl mx-auto">
           <Particles
             particleColors={["#ffffff", "#ffffff"]}
             particleCount={200}
