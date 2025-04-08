@@ -21,7 +21,7 @@ function App() {
     <>
       <main className="max-w-[1500px] mx-auto custom-font">
         <div className="absolute w-full h-full min-h-screen max-w-screen-xl mx-auto">
-          <Particles
+          {/* <Particles
             particleColors={["#ffffff", "#ffffff"]}
             particleCount={200}
             particleSpread={10}
@@ -30,9 +30,9 @@ function App() {
             moveParticlesOnHover={false}
             alphaParticles={false}
             disableRotation={false}
-          />
+          /> */}
         </div>
-        <SplashCursor />
+        {/* <SplashCursor /> */}
         <Header />
         <Hero scrollToSection={scrollToSection} />
 
