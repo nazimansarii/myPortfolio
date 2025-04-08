@@ -18,7 +18,7 @@ export default function Header() {
           duration: 1,
         }}
       >
-        <RotatingText
+        {/* <RotatingText
           texts={[
             "Front-end Developer!",
             "Problem Solver!",
@@ -34,7 +34,7 @@ export default function Header() {
           splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
           transition={{ type: "spring", damping: 30, stiffness: 400 }}
           rotationInterval={2000}
-        />
+        /> */}
       </motion.div>
 
       <motion.div

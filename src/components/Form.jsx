@@ -327,7 +327,7 @@ export default function Form() {
             autoComplete="off"
             className="py-6 text-white px-4 w-full flex justify-center items-center flex-col"
             method="POST"
-            action="https://formspree.io/f/xovqdaqb"
+            action="https://formspree.io/f/xdkepbwl"
           >
             <div className="w-full my-6 rounded-lg transition-all duration-150 ease-in-out shadow-cyan-500 shadow-sm relative hover:shadow-md">
               <input
