@@ -17,6 +17,7 @@ function App() {
       refSection.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+  const mobile = window.innerWidth <= 768;
   return (
     <>
       <main className="max-w-[1500px] mx-auto custom-font">
@@ -32,8 +33,8 @@ function App() {
             disableRotation={false}
           />
         </div>
-        <SplashCursor />
-        
+
+        {mobile ? "" : <SplashCursor />}
         <Header />
         <Hero scrollToSection={scrollToSection} />
 
