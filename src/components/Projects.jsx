@@ -48,22 +48,20 @@ export default function Projects() {
     },
   ];
 
-  const isMobile = window.innerWidth <= 768;
-
   return (
     <>
       <h2 className="text-3xl sm:text-[40px] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] font-[inherit]">
         Latest Works
       </h2>
-      <section className="max-w-screen-xl mx-auto px-7 relative py-12 sm:pb-16 flex flex-wrap justify-around space-y-30 sm:space-x-2 gap-4 font-[inherit]">
+      <section className="max-w-screen-xl mx-auto  md:px-7 relative py-12 sm:pb-16 flex flex-wrap justify-around space-y-30 sm:space-x-2 gap-4 font-[inherit]">
         {allProjects.map((project) => (
           <motion.div
             key={project.id}
-            initial={!isMobile ? { opacity: 0, y: 50 } : {}}
-            whileInView={!isMobile ? { opacity: 1, y: 0 } : {}}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="text-center bg-black shadow-cyan-600 shadow-sm hover:shadow-md flex flex-col items-center relative group hover:scale-105 ease-in-out sm:mr-auto duration-200 px-3 py-5 rounded-md">
+            <div className="text-center  bg-black shadow-cyan-600 shadow-sm hover:shadow-md flex flex-col items-center relative group hover:scale-105 ease-in-out sm:mr-auto duration-200 px-3 py-5 rounded-md">
               <Link
                 to={project.liveLink}
                 target="_blank"
@@ -74,7 +72,10 @@ export default function Projects() {
                   src={project.image}
                   alt={project.title}
                 />
-                <span style={{backgroundColor: project.titleColor} } className="flex group-hover:-top-14 ease-jump duration-200 bg-[#FBE37B] text-black sm:absolute left-1/2 sm:-translate-x-1/2 top-5 px-2 py-1 text-sm sm:text-base mt-2 rounded w-max items-center gap-1 after:hidden sm:after:block after:w-4 after:h-4 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2">
+                <span
+                  style={{ backgroundColor: project.titleColor }}
+                  className="flex group-hover:-top-14 ease-jump duration-200 bg-[#FBE37B] text-black sm:absolute left-1/2 sm:-translate-x-1/2 top-5 px-2 py-1 text-sm sm:text-base mt-2 rounded w-max items-center gap-1 after:hidden sm:after:block after:w-4 after:h-4 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2"
+                >
                   {project.title}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

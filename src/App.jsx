@@ -32,7 +32,7 @@ function App() {
             disableRotation={false}
           />
         </div>
-        {/* <SplashCursor /> */}
+        <SplashCursor />
         <Header />
         <Hero scrollToSection={scrollToSection} />
 
