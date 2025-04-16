@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import tailorshop from "../assets/tailorshop.png";
 import expenseTracker from "../assets/expense-tracker.png";
 import country from "../assets/country.png";
-
+import eCommerce from "../assets/e-commerce.png";
 export default function Projects() {
   const allProjects = [
     {
@@ -46,6 +46,20 @@ export default function Projects() {
       titleColor: "#07AFDB",
       subTitleColor: "#2EA9A2",
     },
+    {
+      id: 4,
+      title: "E-commerce Interface",
+      subTitle: "E-commerce platform",
+      description:
+        "E-commerce is a ReactJS app that fetches real-time data from the Fake Store API. It provides details like title, price, and image. It also allows you to filter countries.",
+
+      tags: ["#ReactJS", "#API", "#TailwindCSS", "#JavaScript"],
+      image: eCommerce,
+      liveLink: "https://e-comredux.netlify.app/",
+      githubLink: "https://github.com/nazimansarii/e-commerce",
+      titleColor: "#FF6B6B",
+      subTitleColor: "#10B981",
+    },
   ];
 
   return (
@@ -53,7 +67,7 @@ export default function Projects() {
       <h2 className="text-3xl sm:text-[40px] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] font-[inherit]">
         Latest Works
       </h2>
-      <section className="max-w-screen-xl mx-auto  md:px-7 relative py-12 sm:pb-16 flex flex-wrap justify-around space-y-30 sm:space-x-2 gap-4 font-[inherit]">
+      <section className="max-w-screen-xl mx-auto  md:px-7 relative py-12 sm:pb-16 flex flex-wrap justify-start space-y-30 sm:space-x-2 gap-4 font-[inherit]">
         {allProjects.map((project) => (
           <motion.div
             key={project.id}
