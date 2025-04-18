@@ -62,13 +62,15 @@ export default function Projects() {
     },
   ];
 
+  const latestProject = [...allProjects].reverse();
+
   return (
     <>
       <h2 className="text-3xl sm:text-[40px] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] font-[inherit]">
         Latest Works
       </h2>
       <section className="max-w-screen-xl mx-auto  md:px-7 relative py-12 sm:pb-16 flex flex-wrap justify-start space-y-30 sm:space-x-2 gap-4 font-[inherit]">
-        {allProjects.map((project) => (
+        {latestProject.map((project) => (
           <motion.div
             key={project.id}
             initial={{ opacity: 0, y: 50 }}
