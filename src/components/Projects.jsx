@@ -5,6 +5,7 @@ import tailorshop from "../assets/tailorshop.png";
 import expenseTracker from "../assets/expense-tracker.png";
 import country from "../assets/country.png";
 import eCommerce from "../assets/e-commerce.png";
+import multiStep from "../assets/multistep.png";
 export default function Projects() {
   const allProjects = [
     {
@@ -57,6 +58,26 @@ export default function Projects() {
       image: eCommerce,
       liveLink: "https://e-comredux.netlify.app/",
       githubLink: "https://github.com/nazimansarii/e-commerce",
+      titleColor: "#FF6B6B",
+      subTitleColor: "#10B981",
+    },
+    {
+      id: 5,
+      title: "Multistep Form ",
+      subTitle: "Multistep platform",
+      description:
+        "A multi-step form that guides users through a staged input process with validation, navigation, and a final summary before submission & this challenge taken from frontend mentor.",
+
+      tags: [
+        "#HTML",
+        "#CSS",
+        "#JavaScript",
+        "Challenge Source: Frontend Mentor",
+      ],
+      image: multiStep,
+      liveLink: "https://multistepformjs.netlify.app/",
+      githubLink:
+        "https://github.com/nazimansarii/allProjects/tree/main/multiStepForm",
       titleColor: "#FF6B6B",
       subTitleColor: "#10B981",
     },
