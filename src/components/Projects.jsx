@@ -78,8 +78,8 @@ export default function Projects() {
       liveLink: "https://multistepformjs.netlify.app/",
       githubLink:
         "https://github.com/nazimansarii/allProjects/tree/main/multiStepForm",
-      titleColor: "#FF6B6B",
-      subTitleColor: "#10B981",
+      titleColor: " #4cd174",
+      subTitleColor: "#bba405",
     },
   ];
 
